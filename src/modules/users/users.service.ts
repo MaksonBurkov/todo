@@ -11,7 +11,7 @@ export class UsersService {
     private usersRepository: Repository<User>,
   ) {}
 
-  findAll(): string {
+  findAll(): Promise<Array<UserDto>> {
     return this.usersRepository.find();
   }
 
